@@ -1,0 +1,13 @@
+.main {
+	border: 1px solid black;
+
+	&__img-first {
+		width: 500px;
+	}
+
+	&__img {
+		background: url(../img/japan_2.jpg) no-repeat 100%;
+		width: 500px;
+		height: 500px;
+	}
+}
