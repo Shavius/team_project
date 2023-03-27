@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: Bug report
-title: ''
+title: ""
 labels: bug
 assignees: Shavius
-
 ---
 
 description

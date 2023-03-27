@@ -1,10 +1,9 @@
 ---
 name: Feature request
 about: Feature request
-title: ''
+title: ""
 labels: feature
 assignees: Shavius
-
 ---
 
 description
