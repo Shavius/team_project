@@ -1,13 +1,11 @@
 import division from "../modules/division";
 
-it("expect answer 50", function () {
-	const res = division(100, 2);
+describe("division", () => {
+	test("should return correct answer for 2 and 1", () => {
+		expect(division(2, 1)).toBe("answer 2");
+	});
 
-	expect(res).toBe("answer 50");
-});
-
-it("expect answer 0", function () {
-	const res = division();
-
-	expect(res).toBe("answer 0");
+	test('should return "answer 0" for undefined arguments', () => {
+		expect(division()).toBe("answer 0");
+	});
 });

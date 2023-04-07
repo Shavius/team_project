@@ -1,13 +1,22 @@
 import multiplication from "../modules/multiplication";
 
-it("expect answer 20", function () {
-	const res = multiplication(10, 2);
+describe("multiplication", () => {
+	test("should return correct answer for 2 and 3", () => {
+		expect(multiplication(2, 3)).toBe("answer 6");
+	});
 
-	expect(res).toBe("answer 20");
-});
+	test('should return "answer 0" for multiplication with zero', () => {
+		expect(multiplication(1, 0)).toBe("answer 0");
+		expect(multiplication(0, 5)).toBe("answer 0");
+	});
 
-it("expect answer 0", function () {
-	const res = multiplication();
+	test('should return "answer 0" for undefined arguments', () => {
+		expect(multiplication()).toBe("answer 0");
+	});
 
-	expect(res).toBe("answer 0");
+	test("should return correct answer for negative numbers", () => {
+		expect(multiplication(-2, 3)).toBe("answer -6");
+		expect(multiplication(2, -3)).toBe("answer -6");
+		expect(multiplication(-2, -3)).toBe("answer 6");
+	});
 });
