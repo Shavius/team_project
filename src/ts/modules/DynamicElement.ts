@@ -23,6 +23,14 @@ export default class DynamicElement {
 	}
 
 	/**
+	 * Создает новый HTML
+	 */
+	createElement(): void {
+		this.htmlElement = document.createElement("div");
+		this.htmlElement.classList.add(this.htmlElementTagName);
+	}
+
+	/**
 	 * Возвращает HTML-элемент, созданный экземпляром класса.
 	 * @returns HTML-элемент.
 	 */
