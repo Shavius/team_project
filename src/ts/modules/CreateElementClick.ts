@@ -9,12 +9,15 @@ export default class CreateElementClick extends DynamicElement {
 
 	elementContent: HTMLElement | null;
 
+	content: string;
+
 	elementContentNumber: number = 0;
 
-	constructor(htmlElementTagName: string, elementButtonName: string, elementContentName: string) {
+	constructor(htmlElementTagName: string, elementButtonName: string, elementContentName: string, content: string) {
 		super(htmlElementTagName);
 		this.elementButton = document.querySelector(elementButtonName);
 		this.elementContent = document.querySelector(elementContentName);
+		this.content = content;
 	}
 
 	initialClick(): void {
@@ -22,7 +25,7 @@ export default class CreateElementClick extends DynamicElement {
 			this.elementButton.onclick = () => {
 				this.elementContentNumber += 1;
 				this.createElement();
-				this.addElementContent(`Привет ${this.elementContentNumber}`);
+				this.addElementContent(`${this.content} ${this.elementContentNumber}`);
 				const elem = this.getElement();
 				this.elementContent?.append(elem);
 			};
