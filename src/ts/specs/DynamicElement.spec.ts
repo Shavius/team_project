@@ -32,4 +32,10 @@ describe("DynamicElement", () => {
 	it("should return the HTML element when the getElement method is called", () => {
 		expect(dynamicElement.getElement()).toBe(dynamicElement.htmlElement);
 	});
+
+	it("creates a new HTML element", () => {
+		dynamicElement.createElement();
+		expect(dynamicElement.htmlElement.tagName.toLowerCase()).toBe("div");
+		expect(dynamicElement.htmlElement.classList.contains(dynamicElement.htmlElementTagName)).toBe(true);
+	});
 });
