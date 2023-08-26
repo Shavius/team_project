@@ -2,9 +2,7 @@ import ICharacterDisplay from "../interfaces/ICharacterDisplay";
 
 export default class CharacterDisplay implements ICharacterDisplay {
 	characterArray: string[];
-
 	display: HTMLElement | null;
-
 	btn: HTMLElement | null;
 
 	constructor(characterArray: string[], display: HTMLElement | null, btn: HTMLElement | null) {

@@ -2,9 +2,7 @@ import IPerson from "../interfaces/IPerson";
 
 export default class Person implements IPerson {
 	name: string;
-
 	age: number;
-
 	race: string;
 
 	constructor(name: string, age: number, race: string) {
