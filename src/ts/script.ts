@@ -4,6 +4,8 @@ import DynamicElement from "./modules/DynamicElement";
 import CreateElementClick from "./modules/CreateElementClick";
 import Person from "./modules/Person";
 import CharacterDisplay from "./modules/CharacterDisplay";
+import PersonWarrior from "./modules/PersonWarrior";
+import { textAndAddition, textAndSubtraction } from "./modules/utils";
 
 const elementButton: HTMLElement | null = document.querySelector("#element1button1");
 const elementContent: HTMLElement | null = document.querySelector("#element1content1");
@@ -33,3 +35,12 @@ const personDisply: HTMLElement | null = document.querySelector(".person__elemen
 const personBtn: HTMLElement | null = document.querySelector(".person__btn");
 
 new CharacterDisplay(characterPersonList, personDisply, personBtn).showCharacterFromList();
+
+const personWarrior1 = new PersonWarrior("Lenargo", 38, "Human", 100, 120);
+const personWarrior2 = new PersonWarrior("Minara", 21, "Human", 100, 150);
+
+console.log(personWarrior1.getInfo());
+console.log(personWarrior2.getInfo());
+
+console.log(textAndAddition("Ответ:", 100, 50));
+console.log(textAndSubtraction("Ответ:", 100, 50));
