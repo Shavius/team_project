@@ -53,4 +53,17 @@ describe("CharacterDisplay class tests", () => {
 
 		expect(displayMock.childElementCount).toBe(0);
 	});
+
+	it("Проверяем что есть все элементы", () => {
+		const characterPersonList = ["Person 1", "Person 2"];
+		const personDisply = document.createElement("div");
+		const personBtn = document.createElement("div");
+		const personNumber = document.createElement("div");
+
+		const character = new CharacterDisplay(characterPersonList, personDisply, personBtn, personNumber);
+
+		character.showCharacterFromList();
+
+		expect(character.allItemsElement?.outerHTML).toBe("<div>2</div>");
+	});
 });

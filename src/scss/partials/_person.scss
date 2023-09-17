@@ -3,6 +3,16 @@
 	border-radius: 5px;
 	text-align: center;
 
+	&__element-all {
+		display: flex;
+		margin-top: 5px;
+		justify-content: center;
+	}
+
+	&__title {
+		margin-right: 5px;
+	}
+
 	&__element {
 		margin: 5px 0 0;
 	}

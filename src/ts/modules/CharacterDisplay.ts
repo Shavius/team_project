@@ -4,14 +4,25 @@ export default class CharacterDisplay implements ICharacterDisplay {
 	characterArray: string[];
 	display: HTMLElement | null;
 	btn: HTMLElement | null;
+	allItemsElement: HTMLElement | null;
 
-	constructor(characterArray: string[], display: HTMLElement | null, btn: HTMLElement | null) {
+	constructor(
+		characterArray: string[],
+		display: HTMLElement | null,
+		btn: HTMLElement | null,
+		allItemsElement: HTMLElement | null = null,
+	) {
 		this.characterArray = characterArray;
 		this.display = display;
 		this.btn = btn;
+		this.allItemsElement = allItemsElement;
 	}
 
 	showCharacterFromList(): void {
+		if (this.allItemsElement != null && this.characterArray != null) {
+			this.allItemsElement.innerHTML = `${this.characterArray.length}`;
+		}
+
 		const characterlistNumber: number = this.characterArray.length;
 		let listNumber: number = -1;
 		let defaultElement: boolean = true;
