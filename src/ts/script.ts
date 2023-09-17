@@ -33,8 +33,9 @@ const characterPersonList: string[] = [
 
 const personDisply: HTMLElement | null = document.querySelector(".person__element");
 const personBtn: HTMLElement | null = document.querySelector(".person__btn");
+const personNumber: HTMLElement | null = document.querySelector(".person__number");
 
-new CharacterDisplay(characterPersonList, personDisply, personBtn).showCharacterFromList();
+new CharacterDisplay(characterPersonList, personDisply, personBtn, personNumber).showCharacterFromList();
 
 const personWarrior1 = new PersonWarrior("Lenargo", 38, "Human", 100, 120);
 const personWarrior2 = new PersonWarrior("Minara", 21, "Human", 100, 150);
