@@ -6,10 +6,13 @@ import Person from "./modules/Person";
 import CharacterDisplay from "./modules/CharacterDisplay";
 import PersonWarrior from "./modules/PersonWarrior";
 import { textAndAddition, textAndSubtraction } from "./modules/utils";
+import CreateWindow from "./modules/CreateWindow";
 
 const elementButton: HTMLElement | null = document.querySelector("#element1button1");
 const elementContent: HTMLElement | null = document.querySelector("#element1content1");
 let elementNumber: number = 0;
+
+const main: HTMLElement | null = document.querySelector(".main");
 
 if (elementButton != null && elementContent != null) {
 	elementButton.onclick = function () {
@@ -45,3 +48,8 @@ console.log(personWarrior2.getInfo());
 
 console.log(textAndAddition("Ответ:", 100, 50));
 console.log(textAndSubtraction("Ответ:", 100, 50));
+
+const newDiv = new CreateWindow(main);
+
+newDiv.create();
+newDiv.addWindow();

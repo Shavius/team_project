@@ -1,0 +1,9 @@
+.window {
+	border: 1px solid black;
+	margin: 10px 0 0;
+
+	&__title {
+		padding: 10px 0;
+		text-align: center;
+	}
+}
