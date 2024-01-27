@@ -1,4 +1,4 @@
-import ICharacterDisplay from "../interfaces/ICharacterDisplay";
+import type ICharacterDisplay from "../interfaces/ICharacterDisplay";
 
 export default class CharacterDisplay implements ICharacterDisplay {
 	characterArray: string[];

@@ -1,4 +1,4 @@
-import IPerson from "../interfaces/IPerson";
+import type IPerson from "../interfaces/IPerson";
 
 export default class Person implements IPerson {
 	name: string;
