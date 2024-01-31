@@ -1,0 +1,49 @@
+.tabs {
+	border: 1px solid black;
+	background-color: silver;
+	border-radius: 5px;
+	margin-bottom: 10px;
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		margin: 10px 0;
+	}
+
+	&__button-item {
+		outline: none;
+		border: 1px solid black;
+		border-radius: 5px;
+		background-color: silver;
+		font-family: inherit;
+		font-size: 15px;
+		cursor: pointer;
+		transition: background-color 0.1s;
+		padding: 4px 8px;
+		margin-right: 10px;
+
+		&--active {
+			color: yellow;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:active {
+			background-color: gray;
+		}
+	}
+
+	&__content-item {
+		display: none;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 5px;
+		margin: 10px;
+
+		&--active {
+			display: block;
+		}
+	}
+}

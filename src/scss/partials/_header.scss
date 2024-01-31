@@ -14,21 +14,6 @@
 	&__content {
 		border: 1px solid black;
 		font-size: 20px;
-		margin: 5px;
-	}
-}
-
-.buttons {
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: center;
-	margin: 10px 0;
-
-	&__item {
-		border: 1px solid black;
-		border-radius: 5px;
-		cursor: pointer;
-		padding: 5px 10px;
-		margin-right: 10px;
+		margin: 10px;
 	}
 }
