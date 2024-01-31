@@ -7,6 +7,7 @@ import CharacterDisplay from "./modules/CharacterDisplay";
 import PersonWarrior from "./modules/PersonWarrior";
 import { textAndAddition, textAndSubtraction } from "./modules/utils";
 import CreateWindow from "./modules/CreateWindow";
+import TabsControl from "./modules/TabsControl";
 
 const elementButton: HTMLElement | null = document.querySelector("#element1button1");
 const elementContent: HTMLElement | null = document.querySelector("#element1content1");
@@ -53,3 +54,14 @@ const newDiv = new CreateWindow(main);
 
 newDiv.create();
 newDiv.addWindow();
+
+const tabsButton = document.querySelector(".tabs__button");
+const tabsContent = document.querySelector(".tabs__content");
+const tabsButtonsList = document.querySelectorAll(".tabs__button .tabs__button-item");
+const tabsContentsList = document.querySelectorAll(".tabs__content .tabs__content-item");
+const tabButtonName = "tabs__button-item";
+const tabContentName = "tabs__content-item";
+
+const tabs = new TabsControl(tabsButton, tabsContent, tabsButtonsList, tabsContentsList, tabButtonName, tabContentName);
+
+tabs.addEventClickButton();
