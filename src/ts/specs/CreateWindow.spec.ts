@@ -20,4 +20,20 @@ describe("CreateWindow", () => {
 
 		expect(div).toBe(null);
 	});
+
+	it("No Window", () => {
+		const nullWindow = null;
+		const newWindow = new CreateWindow(nullWindow);
+
+		newWindow.create();
+		newWindow.addWindow();
+
+		const div = document.querySelector(".window");
+
+		expect(div).toBe(null);
+
+		newWindow.removeWindow();
+
+		expect(div).toBe(null);
+	});
 });
