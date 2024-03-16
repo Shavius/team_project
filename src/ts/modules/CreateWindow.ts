@@ -1,9 +1,9 @@
 export default class CreateWindow {
 	window: HTMLElement | null;
-	inDomument: HTMLElement | null;
+	inDocument: HTMLElement | null;
 
-	constructor(inDomument: HTMLElement | null) {
-		this.inDomument = inDomument;
+	constructor(inDocument: HTMLElement | null) {
+		this.inDocument = inDocument;
 		this.window = null;
 	}
 
@@ -21,13 +21,13 @@ export default class CreateWindow {
 	}
 
 	addWindow(): void {
-		if (this.window !== null && this.inDomument !== null) {
-			this.inDomument.append(this.window);
+		if (this.window !== null && this.inDocument !== null) {
+			this.inDocument.append(this.window);
 		}
 	}
 
 	removeWindow(): void {
-		if (this.window !== null && this.inDomument !== null) {
+		if (this.window !== null && this.inDocument !== null) {
 			this.window.remove();
 		}
 	}
